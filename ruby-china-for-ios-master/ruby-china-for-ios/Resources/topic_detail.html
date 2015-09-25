@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="topic_detail.css" media="screen" rel="stylesheet" type="text/css" />
+  <meta charset='utf-8' />
+</head>
+<body>
+
+<div id="main" class="container-fluid">      
+  <div class="content">
+    <div id="topic_show" class="topics box hfeed">
+      <div class="topic hentry">
+        <div class="infos">
+        <div class="pull-right avatar_large">
+          <a href="/{{user_login}}"><img class="uface" src="{{user_avatar_url}}" style="width:48px;height:48px;" /></a>
+        </div>
+        <h1 class="entry-title">{{title}}</h1>
+        <div class="info leader">
+          <span><a href="/topics/node{{node_id}}" class="node">{{node_name}}</a></span>
+          •<span><a href="/{{user_login}}">{{user_login}}</a></span>
+          • <span>于<abbr class="timeago" title="">{{created_at}}</abbr>发布</span> 
+          {{_last_reply_info}}
+        </div>
+      </div>
+
+      <div class="body entry-content" id="topic_body">
+        {{body_html}}
+      </div>
+      <div class="last_info">
+        <span>{{hits}}次阅读</span>
+      </div>
+    </div>
+  </div>
+
+  {{_replies}}
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+[submodule "Libraries/NSRails"]
+	path = Libraries/NSRails
+	url = git://github.com/dingbat/nsrails.git
